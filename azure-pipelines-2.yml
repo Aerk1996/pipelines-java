@@ -5,10 +5,10 @@
 
 trigger:
 - master
-
 pool:
-  vmImage: ubuntu-latest
-
+  name: myWindowsAgent  
+  demands:
+   - agent.name -equals LAPTOP-1FTK4GNF
 steps:
 - task: Maven@3
   inputs:
